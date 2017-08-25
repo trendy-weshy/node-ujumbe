@@ -1,0 +1,21 @@
+{
+  "name": "node-ujumbe",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "0.16.2",
+    "validator": "8.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "8.0.25",
+    "@types/validator": "6.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

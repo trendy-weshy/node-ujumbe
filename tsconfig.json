@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"noEmitOnError": true,
+		"suppressImplicitAnyIndexErrors": true,
+		"removeComments": true,
+        "preserveConstEnums": true,
+        "alwaysStrict": true,
+        "pretty": true,
+        "declaration": true,
+        "moduleResolution": "node",
+        "allowSyntheticDefaultImports": false,
+        "lib": [
+            "es2015",
+            "es2015.promise",
+            "es5"
+        ],
+        "types": [
+            "axios",
+            "node"
+        ]
+    },
+    "exclude": [
+        "node_modules",
+        "test.ts",
+        "**/*.js"
+    ],
+    "files": [
+        "sender.ts",
+        "sms.ts",
+        "index.ts"
+    ]
+}

@@ -14,16 +14,15 @@ const myPeople = [
     '+{{a phone number}}',
     '+{{a phone number}}'
 ];
-const sampleSMS = new SMS(myPeople, txt);
-const sender = new UjumbeSMS({
+const message = new SMS(myPeople, txt);
+
+new UjumbeSMS({
     email: '[[ YOUR EMAIL ADDRESS ]]',
     apiKey: '[[ YOUR API KEY ]]'
-});
-
-sender.send(sampleSMS).then((data) => {
+}).queue(message).then((data) => {
     console.log('Response status:', data.resStatus);
     console.log('Ujumbe SMS response', data.apiResponse);
     // console.log('Raw axios response', data.raw);
-    console.log('SMS metadata information', sampleSMS.info);
-    console.log('SMS sent', sampleSMS.data);
+    console.log('SMS metadata information', message.info);
+    console.log('SMS sent', message.data);
 }).catch((err) => { throw err; });

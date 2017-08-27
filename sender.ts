@@ -57,7 +57,7 @@ export class UjumbeSMS {
      * @param message {SMS | SMS[]} - uses union types to ensure across the board support
      * @return {Promise<any>}
      */
-    public send(message: SMS | SMS[]): Promise<any> {
+    public queue(message: SMS | SMS[]): Promise<any> {
         let dataPacket;
         if(!Array.isArray(message)) {
             dataPacket = { 'data': SMS.serialize([message]) };

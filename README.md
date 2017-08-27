@@ -6,8 +6,9 @@ an API to [UjumbeSMS](http://ujumbesms.co.ke) Cloud Messaging platform.
 
 * Ensure you have node and npm installed
 * git clone the project
-* Run npm install
-* run npm run build to compile typescript files
+* run `npm install`
+* run `npm run build` to compile typescript files
+* if you may want to clear the build files just run `npm run clean`
 
 ## Example ##
 

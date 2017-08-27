@@ -14,6 +14,7 @@ export interface MessageBag {
     message: string;
     sender: string;
 }
+
 /**
  * Handles sms validation and meta-data generation
  * Validates recepients
@@ -24,14 +25,14 @@ export class SMS {
 	private message: string;
 	private recipients: string[];
 
-	constructor(text: string, phoneNumbers: string[], private sender: string='DEPTHSMS') {
+	constructor(phoneNumbers: string[], text: string, private sender: string='DEPTHSMS') {
 		this.message = text;
 		const validPhoneNumbers=this.filterMobileNumbers(phoneNumbers);
 		this.recipients=[...validPhoneNumbers];
 	}
+
 	/**
-	 * provides metadata on the sms to be sent
-	 * #note: the timestamp is for when the sms was generated
+	 * provides general information on the sms to be sent
 	 * @getter info
 	 * @return { smsToBeSent: number; numOfRecipients: number; constructedOn: Date }
 	 */
@@ -42,10 +43,10 @@ export class SMS {
 			constructedOn: new Date()
 		};
 	}
+
 	/**
 	 * serializes required sms information for the purposes of making API request to sms gateway
 	 * in this case UjumbeSMS
-	 * @getter sms
 	 * @return { message: string; numbers: string; sender: string; }
 	 */
 	public get data() {
@@ -55,18 +56,20 @@ export class SMS {
 			sender: this.sender
 		};
 	}
+
 	/**
 	 * removes all badly formatted and invalid numbers. uses validator isMobilePhone for international validation
 	 * @param phoneNumbers {string[]} - a list of phone numbers that are to be recepients of the message
 	 * @return {string[]}
 	 */
 	private filterMobileNumbers(phoneNumbers: string[]): string[] {
-		return phoneNumbers.filter((n: string) => {
-			if (isMobilePhone(n, 'any')) {
-				return n;
+		return phoneNumbers.filter((number: string) => {
+			if (isMobilePhone(number, 'any')) {
+				return number;
 			}
 		});
 	}
+
 	/**
 	 * this returns valid objects to be used as data in the HTTP transaction
 	 * @param messages {SMS[]} - list of SMS objects

@@ -12,8 +12,9 @@ import {SMS} from './sms';
  */
 export interface Credentials {
     email: string;
-    api_key: string;
+    apiKey: string;
 }
+
 /**
  * the class that interfaces with Ujumbe sms gateway via HTTP
  * @class UjumbeSMS
@@ -27,13 +28,14 @@ export class UjumbeSMS {
             baseURL: 'http://ujumbesms.co.ke/',
             headers: {
                 'email': client.email,
-                'x-Authorization': client.api_key,
+                'x-Authorization': client.apiKey,
                 'Content-Type': 'application/json'
             },
             responseType: 'json'
         };
         this.request = Axios.create(this.config);
     }
+
     /**
      * makes the api POST request to UjumbeSMS
      * @param data {any} - the data to be sent
@@ -49,6 +51,7 @@ export class UjumbeSMS {
                 };
             });
     }
+
     /**
      * this creates the required data packet and performs the actual api request
      * @param message {SMS | SMS[]} - uses union types to ensure across the board support

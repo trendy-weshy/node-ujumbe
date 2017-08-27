@@ -5,7 +5,8 @@ the implementation of the API please check the documation on: [Ujumbe Docs](http
 
 ## Installation ##
 
-* Ensure you have node and npm installed
+* ensure you have node and npm installed
+* typescript is install globally on your system. To ensure run `npm install -g typescript`
 * git clone the project
 * run `npm install`
 * run `npm run build` to compile typescript files

@@ -14,10 +14,10 @@ const myPeople: string[] = [
     '+{{a phone number}}',
     '+{{a phone number}}'
 ];
-const sampleSMS: SMS = new SMS(txt, myPeople);
+const sampleSMS: SMS = new SMS(myPeople, txt);
 const sender: UjumbeSMS = new UjumbeSMS({
     email: '[[ YOUR EMAIL ADDRESS ]]',
-    api_key: '[[ YOUR API KEY ]]'
+    apiKey: '[[ YOUR API KEY ]]'
 });
 
 sender.send(sampleSMS).then((data) => {

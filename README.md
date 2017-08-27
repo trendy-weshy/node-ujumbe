@@ -1,6 +1,7 @@
 # node-ujumbe #
 
-an API to [UjumbeSMS](http://ujumbesms.co.ke) Cloud Messaging platform.
+An API wrapper to [UjumbeSMS](http://ujumbesms.co.ke) Cloud Messaging platform REST api. For more information on
+the implementation of the API please check the documation on: [Ujumbe Docs](http://ujumbesms.co.ke/api/document).
 
 ## Installation ##
 

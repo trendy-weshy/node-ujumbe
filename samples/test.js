@@ -2,6 +2,7 @@
  * MIT License (c) Copyright 2017.
  */
 
+'use strict'
  // js test version of the module
 
 const {UjumbeSMS, SMS} = require('../index');
@@ -24,5 +25,5 @@ sender.send(sampleSMS).then((data) => {
     console.log('Ujumbe SMS response', data.apiResponse);
     // console.log('Raw axios response', data.raw);
     console.log('SMS metadata information', sampleSMS.info);
-    console.log('SMS sent', sampleSMS.sms);
+    console.log('SMS sent', sampleSMS.data);
 }).catch((err) => { throw err; });

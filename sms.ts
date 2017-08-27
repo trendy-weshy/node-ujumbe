@@ -48,7 +48,7 @@ export class SMS {
 	 * @getter sms
 	 * @return { message: string; numbers: string; sender: string; }
 	 */
-	public get sms() {
+	public get data() {
 		return {
 			message: this.message,
 			numbers: this.recipients.join(','),
@@ -72,9 +72,9 @@ export class SMS {
 	 * @param messages {SMS[]} - list of SMS objects
 	 */
 	public static serialize(messages: SMS[]): { message_bag: MessageBag; }[] {
-		return messages.map((n: SMS) => {
+		return messages.map((sms: SMS) => {
 			return{
-				message_bag: n.sms
+				message_bag: sms.data
 			};
 		});
 	}

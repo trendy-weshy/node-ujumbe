@@ -11,8 +11,7 @@ an API to [UjumbeSMS](http://ujumbesms.co.ke) Cloud Messaging platform.
 
 ## Example ##
 
-* Check `test.ts` for typescript example
-* Check `test.js` for javascript example
+* check the `/samples` folder for sample implementation of the module
 
 ## License ##
 

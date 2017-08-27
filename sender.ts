@@ -21,6 +21,7 @@ export interface Credentials {
 export class UjumbeSMS {
     private config: AxiosRequestConfig;
     private request: AxiosInstance;
+
     constructor(client: Credentials) {
         this.config = {
             baseURL: 'http://ujumbesms.co.ke/',

@@ -2,19 +2,20 @@
  * MIT License (c) Copyright 2017.
  */
 
- // js test version of the module
+import {UjumbeSMS, SMS} from '../index';
 
-const {UjumbeSMS, SMS} = require('./index');
-
-const txt = `Hello people. Just testing my new node.js library for UjumbeSMS on node.js.`;
-const myPeople = [
+/**
+ * Taking the new module for a spin
+ */
+const txt: string = `Hello people. Just testing my new node.js library for UjumbeSMS on node.js.`;
+const myPeople: string[] = [
     '+{{a phone number}}',
     '+{{a phone number}}',
     '+{{a phone number}}',
     '+{{a phone number}}'
 ];
-const sampleSMS = new SMS(txt, myPeople);
-const sender = new UjumbeSMS({
+const sampleSMS: SMS = new SMS(txt, myPeople);
+const sender: UjumbeSMS = new UjumbeSMS({
     email: '[[ YOUR EMAIL ADDRESS ]]',
     api_key: '[[ YOUR API KEY ]]'
 });

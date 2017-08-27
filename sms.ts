@@ -26,7 +26,7 @@ export class SMS {
 
 	constructor(text: string, phoneNumbers: string[], private sender: string='DEPTHSMS') {
 		this.message = text;
-		const validPhoneNumbers = this.filterMobileNumbers(phoneNumbers);
+		const validPhoneNumbers=this.filterMobileNumbers(phoneNumbers);
 		this.recipients=[...validPhoneNumbers];
 	}
 	/**

@@ -9,11 +9,13 @@
   },
   "devDependencies": {
     "@types/node": "8.0.25",
-    "@types/validator": "6.2.2"
+    "@types/validator": "6.2.2",
+    "rimraf": "2.6.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap"
+    "build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap",
+    "clean": "rimraf *.js *.d.ts"
   },
   "keywords": [],
   "author": "",

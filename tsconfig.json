@@ -18,13 +18,12 @@
             "es5"
         ],
         "types": [
-            "axios",
             "node"
         ]
     },
     "exclude": [
         "node_modules",
-        "test.ts",
+        "test",
         "**/*.js"
     ],
     "files": [

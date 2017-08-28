@@ -17,9 +17,9 @@ export interface Credentials {
 
 /**
  * the class that interfaces with Ujumbe sms gateway via HTTP
- * @class UjumbeSMS
+ * @class UjumbeApi
  */
-export class UjumbeSMS {
+export class UjumbeApi {
     private config: AxiosRequestConfig;
     private request: AxiosInstance;
 

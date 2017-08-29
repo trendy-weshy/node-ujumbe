@@ -1,5 +1,9 @@
 # node-ujumbe #
 
+[![Build Status](https://travis-ci.org/trendy-weshy/node-ujumbe.svg?branch=master)](https://travis-ci.org/trendy-weshy/node-ujumbe)
+
+[![NPM](https://nodei.co/npm/ujumbesms.png?compact=true)](https://nodei.co/npm/ujumbesms/)
+
 An API wrapper to [UjumbeSMS](http://ujumbesms.co.ke) Cloud Messaging platform REST api. For more information on
 the implementation of the API please check the documation on: [Ujumbe Docs](http://ujumbesms.co.ke/api/document).
 

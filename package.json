@@ -1,6 +1,6 @@
 {
   "name": "ujumbesms",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "a simple module for access UjumbeSMS cloud messaging api",
   "main": "index.js",
   "dependencies": {

@@ -2,7 +2,7 @@
  * MIT License (c) Copyright 2017.
  */
 
-import {default as Axios, AxiosRequestConfig, AxiosInstance, AxiosResponse} from 'axios';
+import {AxiosInstance, AxiosRequestConfig, AxiosResponse, default as Axios} from 'axios';
 import {SMS} from './sms';
 
 /**
@@ -19,7 +19,7 @@ export interface Credentials {
  * the class that interfaces with Ujumbe sms gateway via HTTP
  * @class UjumbeApi
  */
-export class UjumbeApi {
+export class Api {
     private config: AxiosRequestConfig;
     private request: AxiosInstance;
 
@@ -58,12 +58,11 @@ export class UjumbeApi {
      * @return {Promise<any>}
      */
     public queue(message: SMS | SMS[]): Promise<any> {
-        let dataPacket;
         if(!Array.isArray(message)) {
-            dataPacket = { 'data': SMS.serialize([message]) };
-        } else {
-            dataPacket = { 'data': SMS.serialize(message) };
+            return this.api({ data: SMS.serialize([message]) });
         }
-        return this.api(dataPacket);
+        else {
+            return this.api({ data: SMS.serialize(message) });
+        }
     }
 }

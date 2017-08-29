@@ -2,5 +2,5 @@
  * MIT License (c) Copyright 2017.
  */
 
-export * from './sender';
+export * from './api';
 export * from './sms';

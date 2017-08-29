@@ -3,3 +3,4 @@ yarn.lock
 *.js
 *.d.ts
 !test
+.env

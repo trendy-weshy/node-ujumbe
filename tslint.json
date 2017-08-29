@@ -1,4 +1,7 @@
 {
+    "extends": [
+        "tslint:latest"
+    ],
     "rules": {
         "quotemark": [true, "single", "avoid-escape", "jsx-double"],
         "no-empty-interface": true,
@@ -30,6 +33,8 @@
         "max-classes-per-file": [
             false
         ],
-        "variable-name":false
+        "variable-name":false,
+        "one-line": [true, "check-catch", "check-finally", "check-whitespace", "check-open-brace"],
+        "one-variable-per-declaration": [true, "ignore-for-loop"]
     }
 }

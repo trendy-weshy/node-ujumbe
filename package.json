@@ -8,14 +8,23 @@
     "validator": "8.1.0"
   },
   "devDependencies": {
+    "@types/chai": "4.0.4",
+    "@types/mocha": "2.2.42",
     "@types/node": "8.0.25",
     "@types/validator": "6.2.2",
+    "chai": "4.1.1",
+    "chai-as-promised": "7.1.1",
+    "dotenv": "^4.0.0",
+    "mocha": "^3.5.0",
     "rimraf": "2.6.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm start && mocha -t 10000 ./test/**/*.js",
     "build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap",
-    "clean": "rimraf *.js *.d.ts"
+    "clean": "rimraf *.js *.d.ts test/*.js test/*.d.ts",
+    "start": "npm run clean && npm run build",
+    "prepublish": "npm start",
+    "watch:build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap --watch"
   },
   "keywords": [],
   "author": "",

@@ -15,6 +15,10 @@ the implementation of the API please check the documation on: [Ujumbe Docs](http
 ### Running tests ###
 
 * Please ensure the installation step was a success
+* For tests to run bug-free you will need to add a `.env` file with the following variables
+    - `API_KEY` which is the api key provided by ujumbesms
+    - `API_ID` which is your email used to register at ujumbe_sms
+    - Lastly, you can include numbers you wish to use as testers through `TEST_NUM_1`
 * To run tests just run `npm test` on your terminal
 
 ## API ##

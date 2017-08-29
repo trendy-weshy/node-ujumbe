@@ -1,6 +1,6 @@
 {
   "name": "node-ujumbe",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -26,7 +26,21 @@
     "prepublish": "npm start",
     "watch:build": "tsc -p tsconfig.json --diagnostics --inlineSourceMap --watch"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "sms",
+    "ujumbe",
+    "cloud messaging platform",
+    "api",
+    "gateway"
+  ],
+  "author": "John Waweru <wambugu.john.waweru@outlook.com>",
+  "contributors": [
+    "UjumbeSMS <info@depthcomputing.co.ke>",
+    "Patrick Maina <pndungu88@gmail.com>"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "ssh+git@github.com:trendy-weshy/node-ujumbe.git"
+  }
 }

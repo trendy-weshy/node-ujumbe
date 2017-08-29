@@ -49,7 +49,7 @@ export class SMS {
      * in this case UjumbeSMS
      * @return { message: string; numbers: string; sender: string; }
      */
-    public get data() {
+    public get data(): MessageBag {
         return {
             message: this.message,
             numbers: this.recipients.join(','),
